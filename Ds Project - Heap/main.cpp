@@ -6,4 +6,5 @@ int main(){
     cout<<"noreen";
     cout << "amira";
     cout<<"jana";
+    cout<<"all pulled?";
 }
