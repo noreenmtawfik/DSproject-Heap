@@ -7,4 +7,5 @@ int main(){
     cout << "amira";
     cout<<"jana";
     cout<<"all pulled?";
+    cout << "5eir w baraka";
 }
