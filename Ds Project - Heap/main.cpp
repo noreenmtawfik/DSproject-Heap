@@ -7,5 +7,5 @@ int main(){
     cout << "amira";
     cout<<"jana";
     cout<<"all pulled?";
-    cout << "5eir w baraka";
+    cout<<"commit el awl ya jana";
 }
