@@ -3,7 +3,7 @@ using namespace std;
 EmptyChair::EmptyChair(int l, int r) : left(l), right(r) {}
 int EmptyChair::length() const { return right - left + 1; }
 int EmptyChair::distance() const { return (length() - 1) / 2; }
-int EmptyChair::middleseat(bool preference;) const{
+int EmptyChair::middleseat(bool preference) const{
                                                     int len = (left + right)/2
                                                     //if odd length
                                                     if (len % 2 == 1) { 
