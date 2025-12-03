@@ -11,5 +11,6 @@ int EmptyChair::middleseat(bool preference;) const{
                                                  else { 
                                                     return preference ? left + len / 2 - 1 : left + len / 2; 
                                                 }
+                                                
                                             }
                     
