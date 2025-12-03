@@ -12,5 +12,4 @@ Emptychairs(int left, int right);
 int length();
 int distance();
 int middleseat();
-int bestseatcomparator(const Emptychairs& seg2);
 }
