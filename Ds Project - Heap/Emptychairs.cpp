@@ -8,7 +8,7 @@ int EmptyChair::middleseat(bool preference) const{
                                                     int len = length();
                                                     //if odd length
                                                     if (len % 2 == 1) { 
-                                                    return middle_index;  
+                                                    return middle_index + 1;  
                                                  }
                                                  else { 
                                                     return preference ? middle_index / 2  : (middle_index / 2) +1 ; 
