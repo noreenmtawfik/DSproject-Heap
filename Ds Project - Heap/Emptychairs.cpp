@@ -4,13 +4,14 @@ EmptyChair::EmptyChair(int l, int r) : left(l), right(r) {}
 int EmptyChair::length() const { return right - left + 1; }
 int EmptyChair::distance() const { return (length() - 1) / 2; }
 int EmptyChair::middleseat(bool preference) const{
-                                                    int len = (left + right)/2
+                                                    int middle_index = (left + right)/2;
+                                                    int len = length();
                                                     //if odd length
                                                     if (len % 2 == 1) { 
-                                                    return left + len / 2;  
+                                                    return middle_index;  
                                                  }
                                                  else { 
-                                                    return preference ? len / 2  : (len / 2) +1 ; 
+                                                    return preference ? middle_index / 2  : (middle_index / 2) +1 ; 
                                                 }
 
                                             }
