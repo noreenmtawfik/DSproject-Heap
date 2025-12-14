@@ -1,5 +1,6 @@
 #ifndef bestseatcomparator
 #define bestseatcomparator
+#define Emptychairs
 
 #include <iostream>
 using namsepace std;
