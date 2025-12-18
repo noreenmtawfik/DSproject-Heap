@@ -5,7 +5,7 @@ using namespace std;
 class BestseatComparator{
 
 
-bool operator()(const EmptyChair& seg1,const EmptyChair& seg2) const {
+bool operator<()(const EmptyChair& seg1,const EmptyChair& seg2) const {
     if (seg1.distance() != seg2.distance())
         return seg1.distance() > seg2.distance(); // الأكبر أفضل
     return seg1.left < seg2.left;                 // tie-break
