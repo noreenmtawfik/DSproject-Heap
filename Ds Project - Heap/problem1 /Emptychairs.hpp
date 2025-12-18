@@ -8,6 +8,7 @@ class Emptychairs{
 public:
 int left, right;
 
+Emptychairs();
 Emptychairs(int left, int right);
 bool isempty
 int length();

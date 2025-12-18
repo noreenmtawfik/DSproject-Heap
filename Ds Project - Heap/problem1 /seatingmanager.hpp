@@ -1,21 +1,24 @@
-#ifndef seatingmanager
-#define seatingmanager
-#define Emptychairs
-#define bestseatcomparator
-
+#ifndef SEATINGMANAGER_HPP
+#define SEATINGMANAGER_HPP
+#include "Emptychairs.hpp"
+#include "Heap.hpp"
 #include <iostream>
-#include <vector>
+
 using namespace std;
 
 class seatingmanager {
 private:
     int numchairs;
-    Priorityqueue<Emptychairs, bestseatcomparator> pq;
-    vector<int> Customer;
+    Heap <Emptychairs, bestseatcomparator> hp;
+    int* Customer;
     bool preference;
 
 public:
+    seatingmanager();
     seatingmanager(int numchairs, bool preference);
-    seatcustomers(vector<int> Customer);
-    customerat(vector<int> Customer);
+    void seatcustomer(int customerID);
+    int customerat(int pos);
+    void printSeating() const;
+    ~seatingmanager();
 }
+#endif 

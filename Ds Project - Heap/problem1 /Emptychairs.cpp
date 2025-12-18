@@ -1,6 +1,9 @@
 #include "EmptyChair.hpp"
 using namespace std;
 
+EmptyChair::EmptyChair() : left(0), right(0) {}
+    
+
 EmptyChair::EmptyChair(int l, int r) : left(l), right(r) {
     if (left > right) {
         cerr << "Invalid segment: left > right";
