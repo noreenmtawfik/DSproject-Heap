@@ -28,7 +28,7 @@ int EmptyChair::middleseat(bool preference) const{
         return middle_Seat + 1;  
     }
     else { 
-        return preference ? middle_Seat / 2  : (middle_Seat / 2) +1 ; 
+        return preference ? middle_Seat   : middle_Seat +1 ; 
     }
 
 }
