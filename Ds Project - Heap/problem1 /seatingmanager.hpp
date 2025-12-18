@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <vector>
-using namsepace std;
+using namespace std;
 
 class seatingmanager {
 private:

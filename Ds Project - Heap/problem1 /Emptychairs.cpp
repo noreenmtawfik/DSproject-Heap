@@ -7,7 +7,7 @@ EmptyChair::EmptyChair(int l, int r) : left(l), right(r) {
     }
 }
 
- bool EmptyChair::isempty() const {
+bool EmptyChair::isempty() const {
     return length() == 0;
 }
 
@@ -21,14 +21,14 @@ int EmptyChair::distance() const {
 }
 
 int EmptyChair::middleseat(bool preference) const{
-    int middle_index = (left + right)/2;
+    int middle_Seat = (left + right)/2;
     int len = length();
     //if odd length
     if (len % 2 == 1) { 
-        return middle_index + 1;  
+        return middle_Seat + 1;  
     }
     else { 
-        return preference ? middle_index / 2  : (middle_index / 2) +1 ; 
+        return preference ? middle_Seat / 2  : (middle_Seat / 2) +1 ; 
     }
 
 }
