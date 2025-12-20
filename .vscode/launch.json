@@ -8,9 +8,9 @@
             "name": "Launch",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceRoot}/<your program>",
+            "program": "noreenmtawfik/DSproject-Heap/Ds Project - Heap",
             "args": [],
-            "cwd": "${workspaceRoot}"
+            "cwd": "${fileDirname}"
         }
     ]
 }
