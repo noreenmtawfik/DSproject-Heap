@@ -1,17 +1,14 @@
 #include "EmptyChair.hpp"
 using namespace std;
 
-EmptyChair::EmptyChair() : left(0), right(0) {}
-    
-
 EmptyChair::EmptyChair(int l, int r) : left(l), right(r) {
     if (left > right) {
-        cerr << "Invalid segment: left > right";
+        cerr << "Invalid segment: left > right" << endl;
     }
 }
 
-bool EmptyChair::isempty() const {
-    return length() == 0;
+ bool EmptyChair::isempty() const {
+    return left > right;
 }
 
 
@@ -24,14 +21,15 @@ int EmptyChair::distance() const {
 }
 
 int EmptyChair::middleseat(bool preference) const{
-    int middle_Seat = (left + right)/2;
+    int middle_index = (left + right)/2;
     int len = length();
     //if odd length
     if (len % 2 == 1) { 
-        return middle_Seat + 1;  
+        return middle_index;  
     }
+    //if even length
     else { 
-        return preference ? middle_Seat   : middle_Seat +1 ; 
+        return preference ? middle_index  : middle_index + 1 ; 
     }
 
 }

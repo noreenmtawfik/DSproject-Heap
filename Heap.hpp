@@ -17,22 +17,20 @@ private:
 
     void resize();
     
-    // رجعتلك الأسماء هنا child و parent زي ما طلبتي
     void percolateUp(int child);   
     void percolateDown(int parent); 
 
 public:
     Heap();
-    Heap(int capacity); // ضفتلك ده زيادة عشان لو حبيتي تحددي الحجم من البداية
+    Heap(int capacity); 
     ~Heap();
     
-    void push(const T& element);
+    void push(T element);
     T pop();
     T top();
     bool isEmpty();
     int size();
 };
-
 
 
 #endif
