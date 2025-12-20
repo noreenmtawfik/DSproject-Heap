@@ -53,7 +53,7 @@ int seatingmanager::customerat(int pos)const{
 int seatingmanager::printSeating()const{
     for (int i = 0; i < numchairs; i++) {
         if (Customer[i] != 0) {  // skip empty seats
-            cout << seat << " ";
+            cout << Customer[i] << " ";
         }
     }
     cout << endl;
