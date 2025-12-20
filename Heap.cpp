@@ -1,6 +1,6 @@
 // ملحوظة: متعمليش include لـ Heap.h هنا
 // الكود ده هيتنسخ أوتوماتيك جوه الـ .h
-
+#include "Heap.h"
 // 1. Constructor
 template <typename T>
 Heap<T>::Heap() {
