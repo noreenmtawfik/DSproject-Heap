@@ -5,17 +5,17 @@ seatingmanager::seatingmanager() : numchairs(0), preference(true), Customer(null
 
 seatingmanager::seatingmanager(int numchairs, bool preference) : numchairs(numchairs), preference(preference) {
     
-    Customer = new int[numchairs]; // تخصيص مساحة للكرسي الواحد لكل index
-    for (int i = 0; i <= numchairs; i++)
+    Customer = new int[numchairs]; 
+    for (int i = 0; i < numchairs; i++)
         Customer[i] = 0;
 
     EmptyChair intialSeg(0,numchairs-1);
-    hp.Push(intialSeg);
+    hp.push(intialSeg);
 }
 
 seatingmanager::~seatingmanager() {
     if(Customer != nullptr)
-        delete[] customer;
+        delete[] Customer;
 }
 
 void seatingmanager::seatcustomer(int customerID) {
@@ -30,29 +30,29 @@ void seatingmanager::seatcustomer(int customerID) {
     //b3ml left segment
     EmptyChair leftSegment(bestSegment.left, seat - 1);
     if (bestSegment.left <= seat - 1) {
-        heap.push(leftSegment);
+        hp.push(leftSegment);
     }
    
     // w hna el right sgement
     EmptyChair rightSegment(seat + 1, bestSegment.right);
     if (seat + 1 <= bestSegment.right) {
-        heap.push(rightSegment);
+        hp.push(rightSegment);
     }
     
     
 }
 
 int seatingmanager::customerat(int pos)const{
-    if (pos < 0 || pos > numChairs) {
+    if (pos < 0 || pos >= numchairs) {
         cerr << "Invalid chair position!" << endl;
         return -1;
     }
-    return customer[pos];
+    return Customer[pos];
 }
 
 int seatingmanager::printSeating()const{
-    for (int seat : Customer) {
-        if (seat != 0) {  // skip empty seats
+    for (int i = 0; i < numchairs; i++) {
+        if (Customer[i] != 0) {  // skip empty seats
             cout << seat << " ";
         }
     }
